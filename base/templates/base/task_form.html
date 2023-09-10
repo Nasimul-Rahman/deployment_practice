@@ -1,0 +1,14 @@
+{% extends 'base/main.html' %}
+{% load static %}
+{% block content %}
+<a href="{% url 'tasks' %}" style="text-decoration: none;font-weight: bold;color: #46529D; font-size: 2rem;"><i class="fa-solid fa-house"></i></a>
+
+<div class="form_container">
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Add">
+    </form>
+</div>
+
+{% endblock content %}

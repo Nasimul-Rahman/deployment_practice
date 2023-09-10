@@ -1,18 +1,38 @@
-<!DOCTYPE html>
+{% extends 'base/main.html' %}
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'main.css' %}">
-</head>
-<body>
-    <h2>List</h2>
-    {% for task in tasks %}
+{% block content %}
+<header>
+    <a href="{% url 'logout' %}"><i class="fa-solid fa-right-from-bracket"></i></a>
+    <a href="{% url 'profile' %}"><i class="fa-solid fa-user"></i></a>
+</header>
 
-        <h3>{{task}}</h3>
+<section class="banner" style="background-color: #46529D;">
+    <h1>{{request.user}}s To Do List</h1>
+</section>
 
+{%if task_list_size == 0%}
+
+<p>No Tasks</p>
+
+{% else %}
+<div class="task_cards_container">
+    {% for task in tasks%}
+    <div class="task_card">
+        <h3 class="task_card_title">{{task.title}}</h3>
+        <div class="task_card_options">
+            <p><a href="{% url 'task' task.id %}"><i class="fa-solid fa-eye"></i></a></p>
+            <p><a href="{% url 'update-task' task.id %}"><i class="fa-solid fa-pen-to-square"></i></a></p>
+            <p><a href="{% url 'delete-task' task.id %}"><i class="fa-sharp fa-solid fa-trash"></i></a></p>
+        </div>
+    </div>
     {% endfor %}
-</body>
-</html>
+</div>
+{% endif %}
+
+<div class="break"></div>
+    <div class="add_task_button">
+        <a href="{% url 'create-task' %}"><i class="fa-solid fa-plus"></i></a>
+    </div>
+    <div class="break"></div>
+
+{% endblock content %}

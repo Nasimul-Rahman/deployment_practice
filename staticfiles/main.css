@@ -1,3 +1,191 @@
+
+/*                        STYLING task_list.html                          */
+
+
+/*  Body Styling */
 body {
-    background-color: red;
-}
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /*  Header */
+  
+  header {
+    margin-bottom: 10px;
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  header a {
+    text-decoration: none;
+    color: #46529D;
+  }
+  
+  header a i {
+    font-size: 2rem;
+  }
+  
+  /* Container Styling */
+  
+  .container {
+    width: 100%;
+  }
+  
+  /*  Styling for Banner */
+  
+  .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 40%;
+    
+    background-color: #46529D;
+    color: white;
+  }
+  
+  .banner h1 {
+    font-size: calc(12px + 6vw);
+  }
+  
+  
+  /*  Styling for tasks */
+  
+  .task_cards_container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .task_card {
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  
+  .task_card_title {
+    width: 50%;
+    text-align: center;
+  }
+  
+  .task_card_options {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .task_card_options p a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #46529D;
+  }
+  
+  /* Add Task Button */
+  
+  .add_task_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 100%;
+    height: 10vh;
+  
+    position: fixed;
+    bottom: 40px;
+  }
+  
+  .add_task_button a {
+    background-color: #46529D;
+    border-radius: 50%;
+  
+    text-decoration: none;
+    color: white;
+    padding: 5vh;
+  }
+  
+  /* breaker: used for space between sections */
+  
+  .break {
+    height: 10vh
+  }
+  
+  /*                        STYLING task_form.html                          */
+  
+  .form_container {
+    width: 85vw;
+    
+    padding: 20px;
+    margin: auto;
+  }
+  
+  .form_container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .form_container form p {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form_container form p input[type=text] {
+    height: 30px;
+    width: 100%;
+    border: 0.5px solid #46529D;
+  }
+  
+  .form_container form p input[type=password] {
+    height: 30px;
+    width: 100%;
+    border: 0.5px solid #46529D;
+  }
+  
+  .form_container form p textarea {
+    max-height: 30vh;
+    min-height: 30vh;
+    max-width: 100%;
+    min-width: 100%;
+    border: 0.5px solid #46529D;
+  }
+  
+  .form_container form p input:focus {
+    background-color: #c3d2e4;
+  }
+  
+  .form_container form p textarea:focus {
+    background-color: #c3d2e4;
+  }
+  
+  .form_container form input[type='submit'] {
+    background-color: #46529D;
+    color: white;
+    border: none;
+    width: 100px;
+    height: 40px;
+    margin: auto;
+    
+    font-size: 15px;
+  }
+  
+  .form_container form p label {
+    display: none;
+  }
+  
+  /*                        STYLING login.html                          */
+  
+  .login_text_container {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+  }

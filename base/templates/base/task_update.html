@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="form_container">
-    <a href="{% url 'tasks' %}" style="text-decoration: none;font-weight: bold;color: #46529D; font-size: 2rem;"><i class="fa-solid fa-house"></i></a>
+    <a href="{% url 'tasks' %}" style="text-decoration: none;font-weight: bold;color: #223E2A; font-size: 2rem;"><i class="fa-solid fa-house"></i></a>
     <form method="POST" action="">
         {% csrf_token %}
         {{form.as_p}}
